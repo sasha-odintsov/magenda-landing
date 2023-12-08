@@ -1,0 +1,24 @@
+{
+  "name": "magenda-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build -i src/main.css -o public/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sasha-odintsov/magenda-landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sasha-odintsov/magenda-landing/issues"
+  },
+  "homepage": "https://github.com/sasha-odintsov/magenda-landing#readme",
+  "devDependencies": {
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6"
+  }
+}
