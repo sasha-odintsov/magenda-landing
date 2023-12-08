@@ -7,14 +7,20 @@ module.exports = {
         "montserrat": ["Montserrat", "sans-serif"],
       },
       colors: {
-        "blue-main": "#2B579A",
-        "blue-light": "#F5F9FF",
-        "gray": "#7D7D7D",
-        "gray-100": "#E0E0E0"
+        "blue": {
+          "main": "#2B579A",
+          "dark": "#173D77",
+          "light": "#F5F9FF",
+          "contrast": "#5E7ED3",
+        },
+        "gray": {
+          DEFAULT: "#7D7D7D",
+          100: "#E0E0E0",
+        },
       },
-      container: {
-        center: true,
-      },
+      boxShadow: {
+        "around": "0px 0px 15px 5px rgba(43,87,154,0.1);"
+      }
     },
   },
   plugins: [],
