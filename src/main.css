@@ -13,3 +13,7 @@
 .title {
   @apply text-6xl text-blue-dark font-medium mb-8;
 }
+
+.button-main {
+  @apply bg-blue-main rounded-full text-white hover:opacity-80 transition-opacity duration-300;
+}

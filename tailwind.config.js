@@ -21,6 +21,7 @@ module.exports = {
         "gray": {
           DEFAULT: "#7D7D7D",
           100: "#E0E0E0",
+          "border": "#EBEAED",
           "middle": "#575757",
         },
         dark: "#0F172A",
