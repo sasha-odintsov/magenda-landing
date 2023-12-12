@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss build -i src/main.css -o public/styles.css --watch"
+    "build-dev": "tailwindcss build -i src/main.css -o public/styles.css --watch",
+    "build": "npx tailwindcss -o public/styles.css --minify"
   },
   "repository": {
     "type": "git",
