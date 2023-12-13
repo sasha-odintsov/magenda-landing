@@ -8,7 +8,7 @@ module.exports = {
       },
       screens: {
         "3xl": "1920px",
-        "4xl": "2200px",
+        "4xl": "2560px",
       },
       colors: {
         "blue": {
@@ -25,7 +25,7 @@ module.exports = {
           "border": "#EBEAED",
           "middle": "#575757",
         },
-        dark: "#0F172A",
+        "dark": "#0F172A",
       },
       boxShadow: {
         "around": "0px 0px 15px 5px rgba(43,87,154,0.1);"

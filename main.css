@@ -11,7 +11,11 @@
 }
 
 .title {
-  @apply text-6xl text-blue-dark font-medium mb-8;
+  @apply 2xl:text-6xl text-4xl text-blue-dark font-medium xl:mb-8 mb-6;
+}
+
+.padding-x-main {
+  @apply xl:px-14 px-8;
 }
 
 .button-main {
@@ -27,5 +31,5 @@
 }
 
 .footer-link {
-  @apply mb-6 hover:opacity-50 transition-opacity duration-300;
+  @apply xl:mb-6 mb-4 hover:opacity-50 transition-opacity duration-300;
 }
