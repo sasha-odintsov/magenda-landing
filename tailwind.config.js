@@ -7,7 +7,8 @@ module.exports = {
         "montserrat": ["Montserrat", "sans-serif"],
       },
       screens: {
-        "3xl": "1921px",
+        "3xl": "1920px",
+        "4xl": "2200px",
       },
       colors: {
         "blue": {
@@ -28,6 +29,9 @@ module.exports = {
       },
       boxShadow: {
         "around": "0px 0px 15px 5px rgba(43,87,154,0.1);"
+      },
+      borderRadius: {
+        "main": "60px", 
       }
     },
   },
