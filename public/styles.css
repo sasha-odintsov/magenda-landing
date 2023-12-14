@@ -1033,12 +1033,12 @@ html {
   height: 2rem;
 }
 
-.h-\[50px\]{
-  height: 50px;
+.h-\[500px\]{
+  height: 500px;
 }
 
-.h-\[525px\]{
-  height: 525px;
+.h-\[50px\]{
+  height: 50px;
 }
 
 .min-h-\[calc\(100vh-112px\)\]{
@@ -1137,6 +1137,10 @@ html {
   width: 35%;
 }
 
+.w-\[40px\]{
+  width: 40px;
+}
+
 .w-\[42\%\]{
   width: 42%;
 }
@@ -1147,10 +1151,6 @@ html {
 
 .w-\[60px\]{
   width: 60px;
-}
-
-.w-\[65px\]{
-  width: 65px;
 }
 
 .w-\[this-is\\\\\]{
@@ -1239,6 +1239,20 @@ html {
 
 .transform-none{
   transform: none;
+}
+
+@keyframes marquee{
+  0%{
+    transform: translateX(0%);
+  }
+
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee{
+  animation: marquee 20s linear infinite;
 }
 
 .cursor-pointer{
@@ -3302,10 +3316,6 @@ html {
     margin-bottom: 2.5rem;
   }
 
-  .xl\:mb-4{
-    margin-bottom: 1rem;
-  }
-
   .xl\:mb-40{
     margin-bottom: 10rem;
   }
@@ -3338,10 +3348,6 @@ html {
     height: 2.5rem;
   }
 
-  .xl\:h-16{
-    height: 4rem;
-  }
-
   .xl\:h-20{
     height: 5rem;
   }
@@ -3358,24 +3364,20 @@ html {
     width: 2.75rem;
   }
 
+  .xl\:w-20{
+    width: 5rem;
+  }
+
   .xl\:w-\[165px\]{
     width: 165px;
   }
 
+  .xl\:w-\[65px\]{
+    width: 65px;
+  }
+
   .xl\:w-full{
     width: 100%;
-  }
-
-  .xl\:w-10{
-    width: 2.5rem;
-  }
-
-  .xl\:w-16{
-    width: 4rem;
-  }
-
-  .xl\:w-20{
-    width: 5rem;
   }
 
   .xl\:flex-col{
@@ -3385,11 +3387,6 @@ html {
   .xl\:gap-x-14{
     -moz-column-gap: 3.5rem;
          column-gap: 3.5rem;
-  }
-
-  .xl\:gap-x-24{
-    -moz-column-gap: 6rem;
-         column-gap: 6rem;
   }
 
   .xl\:px-14{
@@ -3402,19 +3399,14 @@ html {
     padding-right: 15rem;
   }
 
-  .xl\:py-10{
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
-  .xl\:py-7{
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
-  }
-
   .xl\:px-\[15\%\]{
     padding-left: 15%;
     padding-right: 15%;
+  }
+
+  .xl\:py-10{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .xl\:pb-8{
@@ -3427,10 +3419,6 @@ html {
 
   .xl\:ps-14{
     padding-inline-start: 3.5rem;
-  }
-
-  .xl\:ps-20{
-    padding-inline-start: 5rem;
   }
 
   .xl\:text-2xl{
@@ -3474,6 +3462,10 @@ html {
     margin-bottom: 2.5rem;
   }
 
+  .\32xl\:mb-4{
+    margin-bottom: 1rem;
+  }
+
   .\32xl\:mb-5{
     margin-bottom: 1.25rem;
   }
@@ -3498,16 +3490,8 @@ html {
     margin-top: 2.5rem;
   }
 
-  .\32xl\:mb-4{
-    margin-bottom: 1rem;
-  }
-
   .\32xl\:h-\[100px\]{
     height: 100px;
-  }
-
-  .\32xl\:h-\[680px\]{
-    height: 680px;
   }
 
   .\32xl\:min-h-\[calc\(100vh-149px\)\]{
@@ -3520,6 +3504,10 @@ html {
 
   .\32xl\:w-10{
     width: 2.5rem;
+  }
+
+  .\32xl\:w-11{
+    width: 2.75rem;
   }
 
   .\32xl\:w-6{
@@ -3542,13 +3530,8 @@ html {
     width: 500px;
   }
 
-  .\32xl\:w-11{
-    width: 2.75rem;
-  }
-
-  .\32xl\:gap-x-28{
-    -moz-column-gap: 7rem;
-         column-gap: 7rem;
+  .\32xl\:w-\[65px\]{
+    width: 65px;
   }
 
   .\32xl\:gap-x-24{
@@ -3556,14 +3539,14 @@ html {
          column-gap: 6rem;
   }
 
+  .\32xl\:gap-x-28{
+    -moz-column-gap: 7rem;
+         column-gap: 7rem;
+  }
+
   .\32xl\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .\32xl\:px-\[15\%\]{
-    padding-left: 15%;
-    padding-right: 15%;
   }
 
   .\32xl\:py-10{
@@ -3594,11 +3577,6 @@ html {
   .\32xl\:py-7{
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
-  }
-
-  .\32xl\:px-60{
-    padding-left: 15rem;
-    padding-right: 15rem;
   }
 
   .\32xl\:pb-\[90px\]{

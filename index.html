@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Magenda</title>
     <link rel="stylesheet" href="/public/styles.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
   </head>
   <body class="max-w-screen-4xl 4xl:mx-auto w-[1024px] lg:w-full">
     <div class="2xl:mx-7 mx-5">
@@ -162,6 +164,7 @@
         </main>
         <button
           class="border border-blue-main absolute rounded-full 2xl:w-[100px] 2xl:h-[100px] xl:w-20 xl:h-20 w-14 h-14 flex items-center justify-center bottom-5 hover:animate-bounce left-0 right-0 mx-auto"
+          id="scroll-button"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -181,7 +184,7 @@
       </div>
 
       <!-- About section -->
-      <section class="min-h-screen flex flex-col justify-center mt-32">
+      <section class="min-h-screen flex flex-col justify-center mt-32" id="about-section">
         <div class="2xl:my-7 my-5">
           <h3 class="title">About our platform</h3>
           <div class="xl:flex flex-row-reverse 3xl:gap-x-14 gap-x-10">
@@ -816,12 +819,25 @@
       </section>
 
       <!-- Running line -->
-      <div class="bg-blue-light text-blue-dark font-medium xl:text-8xl text-5xl xl:py-10 py-5 padding-x-main rounded-main overflow-hidden whitespace-nowrap xl:mb-40 mb-28 flex items-center">
-        <span>Healing Connections</span>
-        <div class="w-[65px] shrink-0 mx-8">
-          <img src="/public/images/star.png" alt="Divider" class="w-full">
+      <div class="bg-blue-light text-blue-dark font-medium 2xl:text-8xl text-5xl 2xl:py-10 py-5 padding-x-main rounded-main overflow-hidden xl:mb-40 mb-28 ">
+        <div class="whitespace-nowrap flex items-center animate-marquee">
+          <span>Healing Connections</span>
+          <div class="2xl:w-[65px] w-[40px] shrink-0 mx-8">
+            <img src="/public/images/star.png" alt="Divider" class="w-full">
+          </div>
+          <span>Seamless Solutions</span>
+          <div class="2xl:w-[65px] w-[40px] shrink-0 mx-8">
+            <img src="/public/images/star.png" alt="Divider" class="w-full">
+          </div>
+          <span>Healing Connections</span>
+          <div class="2xl:w-[65px] w-[40px] shrink-0 mx-8">
+            <img src="/public/images/star.png" alt="Divider" class="w-full">
+          </div>
+          <span>Seamless Solutions</span>
+          <div class="2xl:w-[65px] w-[40px] shrink-0 mx-8">
+            <img src="/public/images/star.png" alt="Divider" class="w-full">
+          </div>
         </div>
-        <span>Seamless Solutions</span>
       </div>
     </div>
 
