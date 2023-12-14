@@ -10,8 +10,10 @@
   }
 }
 
-.title {
-  @apply 2xl:text-6xl text-4xl text-blue-dark font-medium xl:mb-8 mb-6;
+@layer components {
+  .title {
+    @apply 2xl:text-6xl text-4xl text-blue-dark font-medium xl:mb-8 mb-6;
+  }
 }
 
 .padding-x-main {
