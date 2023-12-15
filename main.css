@@ -35,3 +35,22 @@
 .footer-link {
   @apply xl:mb-6 mb-4 hover:opacity-50 transition-opacity duration-300;
 }
+
+/*** --- swiper --- ***/
+
+.swiper-wrapper {
+  @apply mb-[90px];
+}
+
+.swiper-pagination-bullet {
+  @apply opacity-100 xl:text-2xl text-xl bg-transparent rounded-none mx-5 !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply xl:text-4xl text-3xl xl:me-[80px] me-[65px] !important;
+}
+
+.swiper-pagination-bullet-active::after {
+  content: "___";
+  margin: 5px;
+}
