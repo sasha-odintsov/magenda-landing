@@ -7,17 +7,21 @@
 @layer base {
   html {
     font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    @screen 2xl {
+      font-size: 16px;
+    }
   }
 }
 
 @layer components {
   .title {
-    @apply 2xl:text-6xl text-4xl text-blue-dark font-medium xl:mb-8 mb-6;
+    @apply 2xl:text-6xl text-4xl text-blue-dark font-medium xl:mb-6 mb-4;
   }
 }
 
 .padding-x-main {
-  @apply xl:px-14 px-8;
+  @apply 3xl:px-14 px-8;
 }
 
 .button-main {
@@ -36,6 +40,10 @@
   @apply xl:mb-6 mb-4 hover:opacity-50 transition-opacity duration-300;
 }
 
+.testimonials-card {
+  @apply bg-blue-light 2xl:rounded-main rounded-[40px] py-4 2xl:px-9 px-7 h-full flex flex-col;
+}
+
 /*** --- swiper --- ***/
 
 .swiper-wrapper {
@@ -47,7 +55,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  @apply xl:text-4xl text-3xl xl:me-[80px] me-[65px] !important;
+  @apply xl:text-4xl text-3xl xl:me-[80px] me-[60px] !important;
 }
 
 .swiper-pagination-bullet-active::after {
