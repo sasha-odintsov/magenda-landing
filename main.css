@@ -18,6 +18,9 @@
   .title {
     @apply 2xl:text-6xl text-4xl text-blue-dark font-medium xl:mb-6 mb-4;
   }
+  .input-border {
+    @apply border-2 border-gray-border focus:border-blue-main focus:ring-0 focus:outline-none;
+  }
 }
 
 .padding-x-main {
@@ -30,10 +33,6 @@
 
 .text-label {
   @apply font-medium block uppercase text-blue-dark;
-}
-
-.input-border {
-  @apply border-2 border-gray-border focus:border-blue-main focus:ring-0 focus:outline-none;
 }
 
 .footer-link {

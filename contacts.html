@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Magenda | Contacts</title>
   <link rel="stylesheet" href="/public/styles.css" />
+  <script src="/js/swiper-bundle.min.js"></script>
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/main.js"></script>
 </head>
@@ -76,7 +77,9 @@
         class="bg-[url(/public/images/bg-contacts.png)] flex items-center 2xl:gap-x-24 gap-x-10 py-5 xl:px-[15%] px-[7%] bg-contain bg-no-repeat 2xl:min-h-[calc(100vh-148px)] min-h-[calc(100vh-103px)]"
       >
         <div class="w-1/2 flex flex-col h-[500px]" id="contacts-info">
-          <h3 class="title max-2xl:text-2xl max-2xl:mb-2">Get in Touch</h3>
+          <h3 class="title max-2xl:text-2xl max-2xl:mb-2">
+            Get in Touch
+          </h3>
           <p class="text-gray 2xl:text-2xl text-lg 2xl:mb-6 mb-2 max-2xl:leading-5">
             We will be happy to answer you and tell you more about our product
           </p>
@@ -100,24 +103,34 @@
           </div>
         </div>
         <div class="w-1/2 flex flex-col" id="contacts-form">
-          <h3 class="title max-2xl:text-2xl max-2xl:mb-2">You can mail us</h3>
+          <h3 class="title max-2xl:text-2xl max-2xl:mb-2">
+            You can mail us
+          </h3>
           <p class="text-gray 2xl:text-2xl text-lg 2xl:mb-6 mb-3 max-2xl:leading-5">
             We are always open to your questions and suggestions
           </p>
-          <form class="bg-[#D8E5ED] rounded-xl 2xl:py-6 py-4 xl:px-14 px-6 mt-auto">
-            <label class="text-label mx-3 my-2">
+          <form class="bg-[#D8E5ED] rounded-xl 2xl:py-6 py-4 xl:px-14 px-6 mt-auto relative" id="form-contacts" novalidate>
+            <label class="text-label mx-3 my-2" for="input-email-contacts">
               E-mail
             </label>
             <input 
               type="email" 
               placeholder="Your email" 
               class="2xl:px-4 2xl:py-3 px-3 py-2 w-full rounded-full input-border 2xl:mb-5 mb-1"
+              id="input-email-contacts"
+              required
             >
-            <label class="text-label mx-3 my-2">
+            <label class="text-label mx-3 my-2" for="textarea-contacts">
               Message
             </label>
-            <textarea rows="6" class="2xl:mb-5 mb-1 rounded-2xl resize-none w-full 2xl:px-4 2xl:py-3 px-3 py-2 input-border" placeholder="Drop us a line"></textarea>
-            <label class="text-label mx-3 my-2">
+            <textarea 
+              rows="6" 
+              class="2xl:mb-5 mb-1 rounded-2xl resize-none w-full 2xl:px-4 2xl:py-3 px-3 py-2 input-border" 
+              placeholder="Drop us a line"
+              id="textarea-contacts"
+              required
+            ></textarea>
+            <label class="text-label mx-3 my-2" for="input-text-contacts">
               Name
             </label>
             <div class="flex mb-3">
@@ -125,11 +138,16 @@
                 type="text" 
                 placeholder="Your name" 
                 class="grow 2xl:px-4 2xl:py-3 px-3 py-2 rounded-full 2xl:me-8 me-5 input-border"
+                id="input-text-contacts"
+                required
               >
               <button type="submit" class="button-main font-semibold 2xl:py-3 py-2 px-9">
                 Send
               </button>
             </div>
+            <span class="text-center my-4 font-medium text-blue-dark text-lg absolute right-8 -bottom-14 hidden" id="success-message">
+              Message Sent
+            </span>
           </form>
         </div>
       </main>
@@ -140,14 +158,14 @@
   <footer class="bg-[url(/public/images/bg-footer.jpg)] bg-cover bg-no-repeat bg-center pt-12 pb-44 xl:px-60 px-24">
     <div class="flex justify-between items-center border-b border-[#6485b8] pb-10 mb-10">
       <a
-          href="/index.html"
-          class="cursor-pointer xl:w-[165px] w-40"
-        >
-          <img
-            src="/public/images/logo-white.png"
-            alt="Logo"
-            class="w-full"
-          />
+        href="/index.html"
+        class="cursor-pointer xl:w-[165px] w-40"
+      >
+        <img
+          src="/public/images/logo-white.png"
+          alt="Logo"
+          class="w-full"
+        />
       </a>
       <div>
         <span class="text-white font-medium 2xl:text-2xl text-xl me-10">
