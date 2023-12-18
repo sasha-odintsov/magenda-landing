@@ -41,9 +41,13 @@ $(() => {
     const el = $("#response-message");
 
     if (status === "success") {
-      el.addClass("text-blue-dark").html("Message Sent");
+      el.removeClass("text-red-500")
+        .addClass("text-blue-dark")
+        .html("Message Sent");
     } else {
-      el.addClass("text-red-500").html("Failed!");
+      el.removeClass("text-blue-dark")
+        .addClass("text-red-500")
+        .html("Oops... Something went wrong!");
     }
 
     el.fadeIn(500, () => {
@@ -52,6 +56,15 @@ $(() => {
       }, 3000);
     });
   };
+
+  $.ajaxSetup({
+    headers: {
+      "X-Requested-With": "XMLHttpRequest",
+    },
+    xhrFields: {
+      withCredentials: true,
+    },
+  });
 
   $("#form-main").on("submit", (e) => {
     e.preventDefault();
@@ -65,48 +78,19 @@ $(() => {
     const checkName = checkField(name);
 
     if (checkEmail && checkText && checkName) {
-      // $.ajaxSetup({
-      //   headers: {}
-      // });
-      // $.post(
-      //   "https://magendamd.com/api/v1/contact-message",
-      //   {
-      //     email: email.val(),
-      //     text: text.val(),
-      //     name: name.val(),
-      //   }
-      // )
-      // .done((data, status) => {
-      //   console.log("res", data);
-      //   $("#form-contacts")[0].reset();
-      //   setResponseMessage(status);
-      // })
-      // .fail((data, status) => {
-      //   console.log(data);
-      //   setResponseMessage(status);
-      // });
-
-      // $.ajax({
-      //   type: "POST",
-      //   url: "https://magendamd.com/api/v1/contact-message",
-      //   data: {
-      //     email: email.val(),
-      //     text: text.val(),
-      //     name: name.val(),
-      //   },
-      //   // headers: {},
-      //   success: (data, status) => {
-      //     console.log("res", data);
-      //     console.log("status", status);
-      //     $("#form-contacts")[0].reset();
-      //     setResponseMessage(status);
-      //   },
-      //   error: (error, status) => {
-      //     console.log("error", error);
-      //     console.log("status", status);
-      //     setResponseMessage(status);
-      //   },
-      // });
+      $.post("https://apidev.magendamd.com/api/v1/contact-message", {
+        email: email.val(),
+        text: text.val(),
+        name: name.val(),
+      })
+        .done((data, status) => {
+          setResponseMessage(status);
+          $("#form-main")[0].reset();
+        })
+        .fail((data, status) => {
+          console.log(data);
+          setResponseMessage(status);
+        });
     }
   });
 
@@ -122,6 +106,19 @@ $(() => {
     const checkName = checkField(name);
 
     if (checkEmail && checkText && checkName) {
+      $.post("https://apidev.magendamd.com/api/v1/contact-message", {
+        email: email.val(),
+        text: text.val(),
+        name: name.val(),
+      })
+        .done((data, status) => {
+          setResponseMessage(status);
+          $("#form-contacts")[0].reset();
+        })
+        .fail((data, status) => {
+          console.log(data);
+          setResponseMessage(status);
+        });
     }
   });
 
