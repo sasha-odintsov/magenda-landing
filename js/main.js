@@ -19,7 +19,7 @@ $(() => {
     const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,4}$/;
     const value = el.val().trim();
     let isValid = true;
-    let isRequired = el.prop("required");
+    const isRequired = el.prop("required");
 
     if (isRequired) {
       isValid = !!value;
@@ -30,11 +30,27 @@ $(() => {
 
     if (isValid) {
       el.removeClass("border-red-500");
-      return true;
     } else {
       el.addClass("border-red-500");
-      return false;
     }
+
+    return isValid;
+  };
+
+  const setResponseMessage = (status) => {
+    const el = $("#response-message");
+
+    if (status === "success") {
+      el.addClass("text-blue-dark").html("Message Sent");
+    } else {
+      el.addClass("text-red-500").html("Failed!");
+    }
+
+    el.fadeIn(500, () => {
+      setTimeout(() => {
+        el.fadeOut(500);
+      }, 3000);
+    });
   };
 
   $("#form-main").on("submit", (e) => {
@@ -44,17 +60,53 @@ $(() => {
     const text = $("#textarea-main");
     const name = $("#input-text-main");
 
-    checkField(email);
-    checkField(text);
-    checkField(name);
+    const checkEmail = checkField(email);
+    const checkText = checkField(text);
+    const checkName = checkField(name);
 
-    if (checkField(email) && checkField(text) && checkField(name)) {
-      $("#form-main")[0].reset();
-      $("#success-message").fadeIn(500, () => {
-        setTimeout(() => {
-          $("#success-message").fadeOut(500);
-        }, 3000);
-      });
+    if (checkEmail && checkText && checkName) {
+      // $.ajaxSetup({
+      //   headers: {}
+      // });
+      // $.post(
+      //   "https://magendamd.com/api/v1/contact-message",
+      //   {
+      //     email: email.val(),
+      //     text: text.val(),
+      //     name: name.val(),
+      //   }
+      // )
+      // .done((data, status) => {
+      //   console.log("res", data);
+      //   $("#form-contacts")[0].reset();
+      //   setResponseMessage(status);
+      // })
+      // .fail((data, status) => {
+      //   console.log(data);
+      //   setResponseMessage(status);
+      // });
+
+      // $.ajax({
+      //   type: "POST",
+      //   url: "https://magendamd.com/api/v1/contact-message",
+      //   data: {
+      //     email: email.val(),
+      //     text: text.val(),
+      //     name: name.val(),
+      //   },
+      //   // headers: {},
+      //   success: (data, status) => {
+      //     console.log("res", data);
+      //     console.log("status", status);
+      //     $("#form-contacts")[0].reset();
+      //     setResponseMessage(status);
+      //   },
+      //   error: (error, status) => {
+      //     console.log("error", error);
+      //     console.log("status", status);
+      //     setResponseMessage(status);
+      //   },
+      // });
     }
   });
 
@@ -65,17 +117,11 @@ $(() => {
     const text = $("#textarea-contacts");
     const name = $("#input-text-contacts");
 
-    checkField(email);
-    checkField(text);
-    checkField(name);
+    const checkEmail = checkField(email);
+    const checkText = checkField(text);
+    const checkName = checkField(name);
 
-    if (checkField(email) && checkField(text) && checkField(name)) {
-      $("#form-contacts")[0].reset();
-      $("#success-message").fadeIn(500, () => {
-        setTimeout(() => {
-          $("#success-message").fadeOut(500);
-        }, 3000);
-      });
+    if (checkEmail && checkText && checkName) {
     }
   });
 
