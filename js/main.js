@@ -1,4 +1,4 @@
-$(() => {
+$(document).ready(() => {
   $("#scroll-button").click(() => {
     $("html, body").animate(
       {
@@ -15,26 +15,32 @@ $(() => {
 
   $(window).resize(setHeight);
 
-  const checkField = (el) => {
+  const checkForm = (form) => {
     const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,4}$/;
-    const value = el.val().trim();
-    let isValid = true;
-    const isRequired = el.prop("required");
+    const isValidInputs = [];
 
-    if (isRequired) {
-      isValid = !!value;
-    }
-    if (el.attr("type") === "email") {
-      isValid = patternEmail.test(value);
-    }
+    form.find(":input[type!=submit]").each(function() {
+      const value = $(this).val().trim();
+      let isValidInput = true;
+      const isRequired = $(this).prop("required");
 
-    if (isValid) {
-      el.removeClass("border-red-500");
-    } else {
-      el.addClass("border-red-500");
-    }
+      if (isRequired) {
+        isValidInput = !!value;
+      }
+      if ($(this).attr("type") === "email") {
+        isValidInput = patternEmail.test(value);
+      }
 
-    return isValid;
+      if (isValidInput) {
+        $(this).removeClass("border-red-500");
+      } else {
+        $(this).addClass("border-red-500");
+      }
+
+      isValidInputs.push(isValidInput);
+    });
+
+    return isValidInputs.every((el) => el);
   };
 
   const setResponseMessage = (status) => {
@@ -57,63 +63,30 @@ $(() => {
     });
   };
 
-  $.ajaxSetup({
-    headers: {
-      "X-Requested-With": "XMLHttpRequest",
-    },
-    xhrFields: {
-      withCredentials: true,
-    },
-  });
-
-  $("#form-main").on("submit", (e) => {
+  $("form").on("submit", function (e) {
     e.preventDefault();
 
-    const email = $("#input-email-main");
-    const text = $("#textarea-main");
-    const name = $("#input-text-main");
+    const data = {};
+    const isValid = checkForm($(this));
+    const formData = $(this).serializeArray();
 
-    const checkEmail = checkField(email);
-    const checkText = checkField(text);
-    const checkName = checkField(name);
+    $.each(formData, function() {
+      data[this.name] = this.value;
+    });
 
-    if (checkEmail && checkText && checkName) {
-      $.post("https://apidev.magendamd.com/api/v1/contact-message", {
-        email: email.val(),
-        text: text.val(),
-        name: name.val(),
-      })
+    if (isValid) {
+      $.ajaxSetup({
+        headers: {
+          "X-Requested-With": "XMLHttpRequest",
+        },
+        xhrFields: {
+          withCredentials: true,
+        },
+      });
+      $.post("https://apidev.magendamd.com/api/v1/contact-message", data)
         .done((data, status) => {
           setResponseMessage(status);
-          $("#form-main")[0].reset();
-        })
-        .fail((data, status) => {
-          console.log(data);
-          setResponseMessage(status);
-        });
-    }
-  });
-
-  $("#form-contacts").on("submit", (e) => {
-    e.preventDefault();
-
-    const email = $("#input-email-contacts");
-    const text = $("#textarea-contacts");
-    const name = $("#input-text-contacts");
-
-    const checkEmail = checkField(email);
-    const checkText = checkField(text);
-    const checkName = checkField(name);
-
-    if (checkEmail && checkText && checkName) {
-      $.post("https://apidev.magendamd.com/api/v1/contact-message", {
-        email: email.val(),
-        text: text.val(),
-        name: name.val(),
-      })
-        .done((data, status) => {
-          setResponseMessage(status);
-          $("#form-contacts")[0].reset();
+          $(this)[0].reset();
         })
         .fail((data, status) => {
           console.log(data);
