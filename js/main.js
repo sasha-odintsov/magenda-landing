@@ -8,13 +8,6 @@ $(document).ready(() => {
     );
   });
 
-  const setHeight = () => {
-    $("#contacts-info").height($("#contacts-form").height());
-  };
-  setHeight();
-
-  $(window).resize(setHeight);
-
   const checkForm = (form) => {
     const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,4}$/;
     const isValidInputs = [];

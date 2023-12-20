@@ -931,6 +931,18 @@ html {
   margin-top: auto;
 }
 
+.ms-3{
+  margin-inline-start: 0.75rem;
+}
+
+.ms-7{
+  margin-inline-start: 1.75rem;
+}
+
+.mt-1{
+  margin-top: 0.25rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -1429,6 +1441,10 @@ html {
 
 .list-outside{
   list-style-position: outside;
+}
+
+.list-disc{
+  list-style-type: disc;
 }
 
 .appearance-none{
@@ -2550,6 +2566,11 @@ html {
   padding-bottom: 1.5rem;
 }
 
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -2661,6 +2682,16 @@ html {
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-bold{
@@ -3662,6 +3693,16 @@ html {
   .\32xl\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .\32xl\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .\32xl\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
