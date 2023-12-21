@@ -12,7 +12,7 @@ $(document).ready(() => {
     const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,4}$/;
     const isValidInputs = [];
 
-    form.find(":input[type!=submit]").each(function() {
+    form.find(":input[type!=submit]").each(function () {
       const value = $(this).val().trim();
       let isValidInput = true;
       const isRequired = $(this).prop("required");
@@ -59,33 +59,39 @@ $(document).ready(() => {
   $("form").on("submit", function (e) {
     e.preventDefault();
 
-    const data = {};
-    const isValid = checkForm($(this));
-    const formData = $(this).serializeArray();
+    grecaptcha
+      .execute("6Ld7bTgpAAAAAFlJzGkSK2YlG_Vpk0LcyZ-5AcFo", { action: "submit" })
+      .then(function (token) {
+        $("#g-recaptcha-response").val(token);
 
-    $.each(formData, function() {
-      data[this.name] = this.value;
-    });
+        const data = {};
+        const isValid = checkForm($("form"));
+        const formData = $("form").serializeArray();
 
-    if (isValid) {
-      $.ajaxSetup({
-        headers: {
-          "X-Requested-With": "XMLHttpRequest",
-        },
-        xhrFields: {
-          withCredentials: true,
-        },
-      });
-      $.post("https://apidev.magendamd.com/api/v1/contact-message", data)
-        .done((data, status) => {
-          setResponseMessage(status);
-          $(this)[0].reset();
-        })
-        .fail((data, status) => {
-          console.log(data);
-          setResponseMessage(status);
+        $.each(formData, function () {
+          data[this.name] = this.value;
         });
-    }
+
+        if (isValid) {
+          $.ajaxSetup({
+            headers: {
+              "X-Requested-With": "XMLHttpRequest",
+            },
+            xhrFields: {
+              withCredentials: true,
+            },
+          });
+          $.post("https://apidev.magendamd.com/api/v1/contact-message", data)
+            .done((data, status) => {
+              setResponseMessage(status);
+              $("form")[0].reset();
+            })
+            .fail((data, status) => {
+              console.log(data);
+              setResponseMessage(status);
+            });
+        }
+      });
   });
 
   const swiper = new Swiper(".swiper", {

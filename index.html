@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/public/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/public/styles.css" />
     <script src="/js/swiper-bundle.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld7bTgpAAAAAFlJzGkSK2YlG_Vpk0LcyZ-5AcFo"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
   </head>
@@ -1794,7 +1795,11 @@
                 name="name"
                 required
               />
-              <button type="submit" class="button-main font-semibold py-4 px-9">
+              <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+              <button 
+                type="submit" 
+                class="button-main font-semibold py-4 px-9"
+              >
                 Send
               </button>
             </div>

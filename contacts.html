@@ -6,6 +6,7 @@
     <title>Magenda | Contacts</title>
     <link rel="stylesheet" href="/public/styles.css" />
     <script src="/js/swiper-bundle.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld7bTgpAAAAAFlJzGkSK2YlG_Vpk0LcyZ-5AcFo"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
   </head>
@@ -216,6 +217,7 @@
                     name="name"
                     required
                   />
+                  <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
                   <button
                     type="submit"
                     class="button-main font-semibold 2xl:py-3 py-2 px-9"
