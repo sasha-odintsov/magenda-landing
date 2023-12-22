@@ -81,7 +81,7 @@ $(document).ready(() => {
               withCredentials: true,
             },
           });
-          $.post("https://apidev.magendamd.com/api/v1/contact-message", data)
+          $.post("https://api.magendamd.com/api/v1/contact-message", data)
             .done((data, status) => {
               setResponseMessage(status);
               $("form")[0].reset();
