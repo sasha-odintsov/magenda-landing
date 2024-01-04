@@ -634,6 +634,23 @@ html {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
+.footer-link{
+  margin-bottom: 1rem;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.footer-link:hover{
+  opacity: 0.5;
+}
+
+@media (min-width: 1280px){
+  .footer-link{
+    margin-bottom: 1.5rem;
+  }
+}
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -907,6 +924,10 @@ html {
   margin-inline-start: 1.5rem;
 }
 
+.mt-1{
+  margin-top: 0.25rem;
+}
+
 .mt-10{
   margin-top: 2.5rem;
 }
@@ -929,18 +950,6 @@ html {
 
 .mt-auto{
   margin-top: auto;
-}
-
-.ms-3{
-  margin-inline-start: 0.75rem;
-}
-
-.ms-7{
-  margin-inline-start: 1.75rem;
-}
-
-.mt-1{
-  margin-top: 0.25rem;
 }
 
 .box-border{
@@ -1042,10 +1051,6 @@ html {
   display: none;
 }
 
-.h-1\/2{
-  height: 50%;
-}
-
 .h-14{
   height: 3.5rem;
 }
@@ -1062,8 +1067,8 @@ html {
   height: 2rem;
 }
 
-.h-\[500px\]{
-  height: 500px;
+.h-\[120px\]{
+  height: 120px;
 }
 
 .h-\[50px\]{
@@ -1202,6 +1207,19 @@ html {
   width: 100%;
 }
 
+.w-min{
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.w-\[40\%\]{
+  width: 40%;
+}
+
+.w-\[60\%\]{
+  width: 60%;
+}
+
 .max-w-\[1000px\]{
   max-width: 1000px;
 }
@@ -1214,8 +1232,20 @@ html {
   max-width: 2560px;
 }
 
+.max-w-\[700px\]{
+  max-width: 700px;
+}
+
+.max-w-\[750px\]{
+  max-width: 750px;
+}
+
 .flex-shrink{
   flex-shrink: 1;
+}
+
+.flex-shrink-0{
+  flex-shrink: 0;
 }
 
 .shrink{
@@ -2075,10 +2105,6 @@ html {
   border-radius: 1rem;
 }
 
-.rounded-3xl{
-  border-radius: 1.5rem;
-}
-
 .rounded-full{
   border-radius: 9999px;
 }
@@ -2209,10 +2235,6 @@ html {
   border-bottom-width: 1px;
 }
 
-.border-b-2{
-  border-bottom-width: 2px;
-}
-
 .border-e{
   border-inline-end-width: 1px;
 }
@@ -2286,11 +2308,6 @@ html {
   border-color: rgb(224 224 224 / var(--tw-border-opacity));
 }
 
-.border-gray-border{
-  --tw-border-opacity: 1;
-  border-color: rgb(235 234 237 / var(--tw-border-opacity));
-}
-
 .border-red-500{
   --tw-border-opacity: 1;
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
@@ -2345,10 +2362,6 @@ html {
 
 .bg-\[url\(\/public\/images\/bg-main\.png\)\]{
   background-image: url(/public/images/bg-main.png);
-}
-
-.bg-\[url\(\/public\/images\/doctor-contacts\.png\)\]{
-  background-image: url(/public/images/doctor-contacts.png);
 }
 
 .decoration-slice{
@@ -2521,9 +2534,9 @@ html {
   padding-right: 2.25rem;
 }
 
-.px-\[7\%\]{
-  padding-left: 7%;
-  padding-right: 7%;
+.px-\[6\%\]{
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 .py-1{
@@ -2566,21 +2579,12 @@ html {
   padding-bottom: 1.5rem;
 }
 
-.py-8{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .pb-10{
   padding-bottom: 2.5rem;
 }
 
 .pb-44{
   padding-bottom: 11rem;
-}
-
-.pb-6{
-  padding-bottom: 1.5rem;
 }
 
 .pe-10{
@@ -2659,6 +2663,11 @@ html {
   vertical-align: super;
 }
 
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-5xl{
   font-size: 3rem;
   line-height: 1;
@@ -2682,16 +2691,6 @@ html {
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .font-bold{
@@ -2776,6 +2775,18 @@ html {
 
 .leading-5{
   line-height: 1.25rem;
+}
+
+.leading-3{
+  line-height: .75rem;
+}
+
+.leading-normal{
+  line-height: 1.5;
+}
+
+.leading-none{
+  line-height: 1;
 }
 
 .text-\[\#336699\]\/\[\.35\]{
@@ -3201,23 +3212,6 @@ html {
   color: rgb(23 61 119 / var(--tw-text-opacity));
 }
 
-.footer-link{
-  margin-bottom: 1rem;
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-}
-
-.footer-link:hover{
-  opacity: 0.5;
-}
-
-@media (min-width: 1280px){
-  .footer-link{
-    margin-bottom: 1.5rem;
-  }
-}
-
 .testimonials-card{
   display: flex;
   height: 100%;
@@ -3393,21 +3387,6 @@ html {
   }
 }
 
-@media not all and (min-width: 1599px){
-  .max-2xl\:mb-2{
-    margin-bottom: 0.5rem;
-  }
-
-  .max-2xl\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .max-2xl\:leading-5{
-    line-height: 1.25rem;
-  }
-}
-
 @media (min-width: 640px){
   .sm\:underline{
     text-decoration-line: underline;
@@ -3452,6 +3431,10 @@ html {
 
   .xl\:mt-24{
     margin-top: 6rem;
+  }
+
+  .xl\:mt-0{
+    margin-top: 0px;
   }
 
   .xl\:flex{
@@ -3504,15 +3487,6 @@ html {
     padding-right: 15rem;
   }
 
-  .xl\:px-\[15\%\]{
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-
-  .xl\:pb-8{
-    padding-bottom: 2rem;
-  }
-
   .xl\:pe-28{
     padding-inline-end: 7rem;
   }
@@ -3524,6 +3498,21 @@ html {
   .xl\:text-6xl{
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .xl\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  @media not all and (min-width: 1599px){
+    .xl\:max-2xl\:w-\[40\%\]{
+      width: 40%;
+    }
+
+    .xl\:max-2xl\:w-\[60\%\]{
+      width: 60%;
+    }
   }
 }
 
@@ -3576,6 +3565,10 @@ html {
 
   .\32xl\:me-8{
     margin-inline-end: 2rem;
+  }
+
+  .\32xl\:mt-0{
+    margin-top: 0px;
   }
 
   .\32xl\:h-\[100px\]{
@@ -3631,11 +3624,6 @@ html {
          column-gap: 5rem;
   }
 
-  .\32xl\:gap-x-24{
-    -moz-column-gap: 6rem;
-         column-gap: 6rem;
-  }
-
   .\32xl\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
@@ -3680,6 +3668,11 @@ html {
     line-height: 2rem;
   }
 
+  .\32xl\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
   .\32xl\:text-8xl{
     font-size: 6rem;
     line-height: 1;
@@ -3695,14 +3688,14 @@ html {
     line-height: 1.75rem;
   }
 
-  .\32xl\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
+  .\32xl\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
-  .\32xl\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .\32xl\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -3741,9 +3734,34 @@ html {
          column-gap: 3rem;
   }
 
+  .\33xl\:gap-x-24{
+    -moz-column-gap: 6rem;
+         column-gap: 6rem;
+  }
+
+  .\33xl\:px-\[10\%\]{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
   .\33xl\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .\33xl\:px-\[8\%\]{
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .\33xl\:px-\[12\%\]{
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+
+  .\33xl\:px-\[11\%\]{
+    padding-left: 11%;
+    padding-right: 11%;
   }
 
   .\33xl\:ps-0{

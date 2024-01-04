@@ -21,6 +21,9 @@
   .input-border {
     @apply border-2 border-gray-border focus:border-blue-main focus:ring-0 focus:outline-none;
   }
+  .footer-link {
+    @apply xl:mb-6 mb-4 hover:opacity-50 transition-opacity duration-300;
+  }
 }
 
 .padding-x-main {
@@ -33,10 +36,6 @@
 
 .text-label {
   @apply font-medium block uppercase text-blue-dark;
-}
-
-.footer-link {
-  @apply xl:mb-6 mb-4 hover:opacity-50 transition-opacity duration-300;
 }
 
 .testimonials-card {
