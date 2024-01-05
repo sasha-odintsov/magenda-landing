@@ -1212,16 +1212,12 @@ html {
   width: min-content;
 }
 
-.w-\[40\%\]{
-  width: 40%;
-}
-
-.w-\[60\%\]{
-  width: 60%;
-}
-
 .max-w-\[1000px\]{
   max-width: 1000px;
+}
+
+.max-w-\[750px\]{
+  max-width: 750px;
 }
 
 .max-w-\[900px\]{
@@ -1232,20 +1228,8 @@ html {
   max-width: 2560px;
 }
 
-.max-w-\[700px\]{
-  max-width: 700px;
-}
-
-.max-w-\[750px\]{
-  max-width: 750px;
-}
-
 .flex-shrink{
   flex-shrink: 1;
-}
-
-.flex-shrink-0{
-  flex-shrink: 0;
 }
 
 .shrink{
@@ -2777,14 +2761,6 @@ html {
   line-height: 1.25rem;
 }
 
-.leading-3{
-  line-height: .75rem;
-}
-
-.leading-normal{
-  line-height: 1.5;
-}
-
 .leading-none{
   line-height: 1;
 }
@@ -3433,10 +3409,6 @@ html {
     margin-top: 6rem;
   }
 
-  .xl\:mt-0{
-    margin-top: 0px;
-  }
-
   .xl\:flex{
     display: flex;
   }
@@ -3500,11 +3472,6 @@ html {
     line-height: 1;
   }
 
-  .xl\:text-lg{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
   @media not all and (min-width: 1599px){
     .xl\:max-2xl\:w-\[40\%\]{
       width: 40%;
@@ -3551,10 +3518,6 @@ html {
     margin-bottom: 1.25rem;
   }
 
-  .\32xl\:mb-6{
-    margin-bottom: 1.5rem;
-  }
-
   .\32xl\:mb-7{
     margin-bottom: 1.75rem;
   }
@@ -3565,10 +3528,6 @@ html {
 
   .\32xl\:me-8{
     margin-inline-end: 2rem;
-  }
-
-  .\32xl\:mt-0{
-    margin-top: 0px;
   }
 
   .\32xl\:h-\[100px\]{
@@ -3668,9 +3627,9 @@ html {
     line-height: 2rem;
   }
 
-  .\32xl\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .\32xl\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .\32xl\:text-8xl{
@@ -3686,11 +3645,6 @@ html {
   .\32xl\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-
-  .\32xl\:text-3xl{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .\32xl\:text-xl{
@@ -3747,21 +3701,6 @@ html {
   .\33xl\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
-
-  .\33xl\:px-\[8\%\]{
-    padding-left: 8%;
-    padding-right: 8%;
-  }
-
-  .\33xl\:px-\[12\%\]{
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-
-  .\33xl\:px-\[11\%\]{
-    padding-left: 11%;
-    padding-right: 11%;
   }
 
   .\33xl\:ps-0{
