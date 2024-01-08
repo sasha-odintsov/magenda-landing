@@ -952,6 +952,10 @@ html {
   margin-top: auto;
 }
 
+.ms-auto{
+  margin-inline-start: auto;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -1785,6 +1789,11 @@ html {
        column-gap: 2rem;
 }
 
+.gap-x-12{
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -2561,6 +2570,11 @@ html {
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.px-\[7\%\]{
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
 .pb-10{
@@ -3472,6 +3486,16 @@ html {
     line-height: 1;
   }
 
+  @media not all and (min-width: 1920px){
+    .xl\:max-3xl\:w-\[40\%\]{
+      width: 40%;
+    }
+
+    .xl\:max-3xl\:w-\[60\%\]{
+      width: 60%;
+    }
+  }
+
   @media not all and (min-width: 1599px){
     .xl\:max-2xl\:w-\[40\%\]{
       width: 40%;
@@ -3583,6 +3607,11 @@ html {
          column-gap: 5rem;
   }
 
+  .\32xl\:gap-x-24{
+    -moz-column-gap: 6rem;
+         column-gap: 6rem;
+  }
+
   .\32xl\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
@@ -3618,6 +3647,11 @@ html {
     padding-bottom: 1.75rem;
   }
 
+  .\32xl\:px-\[10\%\]{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
   .\32xl\:pb-\[90px\]{
     padding-bottom: 90px;
   }
@@ -3650,6 +3684,16 @@ html {
   .\32xl\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  @media not all and (min-width: 1920px){
+    .\32xl\:max-3xl\:w-\[40\%\]{
+      width: 40%;
+    }
+
+    .\32xl\:max-3xl\:w-\[60\%\]{
+      width: 60%;
+    }
   }
 }
 
@@ -3703,6 +3747,21 @@ html {
     padding-bottom: 1rem;
   }
 
+  .\33xl\:px-\[9\%\]{
+    padding-left: 9%;
+    padding-right: 9%;
+  }
+
+  .\33xl\:px-\[8\%\]{
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .\33xl\:px-\[7\%\]{
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
   .\33xl\:ps-0{
     padding-inline-start: 0px;
   }
@@ -3728,6 +3787,20 @@ html {
 
   .\33xl\:leading-\[40px\]{
     line-height: 40px;
+  }
+}
+
+@media (min-width: 2000px){
+  .min-\[2000px\]\:px-\[10\%\]{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media (min-width: 2100px){
+  .min-\[2100px\]\:px-\[10\%\]{
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
