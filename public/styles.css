@@ -952,10 +952,6 @@ html {
   margin-top: auto;
 }
 
-.ms-auto{
-  margin-inline-start: auto;
-}
-
 .box-border{
   box-sizing: border-box;
 }
@@ -1774,9 +1770,9 @@ html {
   justify-items: stretch;
 }
 
-.gap-x-10{
-  -moz-column-gap: 2.5rem;
-       column-gap: 2.5rem;
+.gap-x-12{
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
 }
 
 .gap-x-4{
@@ -1787,11 +1783,6 @@ html {
 .gap-x-8{
   -moz-column-gap: 2rem;
        column-gap: 2rem;
-}
-
-.gap-x-12{
-  -moz-column-gap: 3rem;
-       column-gap: 3rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
@@ -2527,9 +2518,9 @@ html {
   padding-right: 2.25rem;
 }
 
-.px-\[6\%\]{
-  padding-left: 6%;
-  padding-right: 6%;
+.px-\[7\%\]{
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
 .py-1{
@@ -2570,11 +2561,6 @@ html {
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.px-\[7\%\]{
-  padding-left: 7%;
-  padding-right: 7%;
 }
 
 .pb-10{
@@ -3485,26 +3471,6 @@ html {
     font-size: 3.75rem;
     line-height: 1;
   }
-
-  @media not all and (min-width: 1920px){
-    .xl\:max-3xl\:w-\[40\%\]{
-      width: 40%;
-    }
-
-    .xl\:max-3xl\:w-\[60\%\]{
-      width: 60%;
-    }
-  }
-
-  @media not all and (min-width: 1599px){
-    .xl\:max-2xl\:w-\[40\%\]{
-      width: 40%;
-    }
-
-    .xl\:max-2xl\:w-\[60\%\]{
-      width: 60%;
-    }
-  }
 }
 
 @media (min-width: 1599px){
@@ -3647,11 +3613,6 @@ html {
     padding-bottom: 1.75rem;
   }
 
-  .\32xl\:px-\[10\%\]{
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-
   .\32xl\:pb-\[90px\]{
     padding-bottom: 90px;
   }
@@ -3732,34 +3693,9 @@ html {
          column-gap: 3rem;
   }
 
-  .\33xl\:gap-x-24{
-    -moz-column-gap: 6rem;
-         column-gap: 6rem;
-  }
-
-  .\33xl\:px-\[10\%\]{
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-
   .\33xl\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
-
-  .\33xl\:px-\[9\%\]{
-    padding-left: 9%;
-    padding-right: 9%;
-  }
-
-  .\33xl\:px-\[8\%\]{
-    padding-left: 8%;
-    padding-right: 8%;
-  }
-
-  .\33xl\:px-\[7\%\]{
-    padding-left: 7%;
-    padding-right: 7%;
   }
 
   .\33xl\:ps-0{
@@ -3787,13 +3723,6 @@ html {
 
   .\33xl\:leading-\[40px\]{
     line-height: 40px;
-  }
-}
-
-@media (min-width: 2000px){
-  .min-\[2000px\]\:px-\[10\%\]{
-    padding-left: 10%;
-    padding-right: 10%;
   }
 }
 
