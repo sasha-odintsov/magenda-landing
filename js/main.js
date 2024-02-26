@@ -8,6 +8,8 @@ $(document).ready(() => {
     );
   });
 
+  $(".current-year").html(new Date().getFullYear());
+
   const checkForm = (form) => {
     const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,4}$/;
     const isValidInputs = [];
