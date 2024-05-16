@@ -912,6 +912,10 @@ html {
   margin-inline-end: 2rem;
 }
 
+.ms-2{
+  margin-inline-start: 0.5rem;
+}
+
 .ms-4{
   margin-inline-start: 1rem;
 }
@@ -936,6 +940,10 @@ html {
   margin-top: 0.5rem;
 }
 
+.mt-20{
+  margin-top: 5rem;
+}
+
 .mt-28{
   margin-top: 7rem;
 }
@@ -952,24 +960,8 @@ html {
   margin-top: auto;
 }
 
-.-mt-1{
-  margin-top: -0.25rem;
-}
-
-.-mt-1\.5{
-  margin-top: -0.375rem;
-}
-
-.mt-14{
-  margin-top: 3.5rem;
-}
-
-.mt-16{
-  margin-top: 4rem;
-}
-
-.mt-20{
-  margin-top: 5rem;
+.ms-3{
+  margin-inline-start: 0.75rem;
 }
 
 .box-border{
@@ -1475,6 +1467,10 @@ html {
 
 .list-outside{
   list-style-position: outside;
+}
+
+.list-decimal{
+  list-style-type: decimal;
 }
 
 .list-disc{
@@ -2587,8 +2583,8 @@ html {
   padding-bottom: 2.5rem;
 }
 
-.pb-44{
-  padding-bottom: 11rem;
+.pb-32{
+  padding-bottom: 8rem;
 }
 
 .pe-10{
@@ -2609,18 +2605,6 @@ html {
 
 .pt-12{
   padding-top: 3rem;
-}
-
-.pb-40{
-  padding-bottom: 10rem;
-}
-
-.pb-36{
-  padding-bottom: 9rem;
-}
-
-.pb-32{
-  padding-bottom: 8rem;
 }
 
 .text-left{
@@ -3185,6 +3169,14 @@ html {
   content: var(--tw-content);
 }
 
+.\[counter-increment\:section\]{
+  counter-increment: section;
+}
+
+.\[counter-reset\:section\]{
+  counter-reset: section;
+}
+
 .padding-x-main{
   padding-left: 2rem;
   padding-right: 2rem;
@@ -3329,6 +3321,14 @@ html {
       max-width: 2560px;
     }
   }
+}
+
+.marker\:\[content\:counters\(section\2c \'\.\'\)\'\.\'\] *::marker{
+  content: counters(section,'.')'.';
+}
+
+.marker\:\[content\:counters\(section\2c \'\.\'\)\'\.\'\]::marker{
+  content: counters(section,'.')'.';
 }
 
 .hover\:scale-110:hover{
