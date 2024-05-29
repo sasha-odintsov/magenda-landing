@@ -9,6 +9,7 @@
     <script src="/js/swiper-bundle.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js?render=6Ld7bTgpAAAAAFlJzGkSK2YlG_Vpk0LcyZ-5AcFo"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
   </head>
   <body class="max-w-screen-4xl 4xl:mx-auto w-[1024px] lg:w-full">
@@ -1784,7 +1785,7 @@
         </p>
         <div class="flex 2xl:gap-x-20 gap-x-8">
           <form
-            class="w-1/2 bg-blue-light rounded-main 2xl:py-10 py-5 px-8 relative"
+            class="w-1/2 bg-blue-light rounded-main 2xl:py-8 py-5 px-8 relative"
             id="form-main"
             novalidate
           >
@@ -1794,7 +1795,7 @@
             <input
               type="email"
               placeholder="Your email"
-              class="p-4 w-full rounded-full input-border 2xl:mb-7 mb-2"
+              class="p-4 w-full rounded-full input-border 2xl:mb-4 mb-2"
               id="input-email-main"
               name="email"
               required
@@ -1803,17 +1804,28 @@
               Message
             </label>
             <textarea
-              rows="10"
-              class="2xl:mb-7 mb-2 rounded-2xl input-border resize-none w-full p-4"
+              rows="6"
+              class="2xl:mb-4 mb-2 rounded-2xl input-border resize-none w-full p-4"
               placeholder="Drop us a line"
               id="textarea-main"
               name="text"
               required
             ></textarea>
+            <label class="text-label 2xl:m-4 mx-4 my-2" for="input-tel-main">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              placeholder="Your phone number"
+              class="p-4 w-full rounded-full input-border 2xl:mb-4 mb-2"
+              id="input-tel-main"
+              name="phone"
+              required
+            />
             <label class="text-label 2xl:m-4 mx-4 my-2" for="input-text-main">
               Name
             </label>
-            <div class="flex mb-7">
+            <div class="flex mb-5">
               <input
                 type="text"
                 placeholder="Your name"

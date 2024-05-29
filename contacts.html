@@ -8,6 +8,7 @@
     <script src="/js/swiper-bundle.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js?render=6Ld7bTgpAAAAAFlJzGkSK2YlG_Vpk0LcyZ-5AcFo"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
   </head>
   <body class="max-w-screen-4xl 4xl:mx-auto w-[1024px] lg:w-full">
@@ -232,7 +233,7 @@
                 <input
                   type="email"
                   placeholder="Your email"
-                  class="2xl:px-4 2xl:py-3 px-3 py-2 w-full rounded-full input-border 2xl:mb-5 mb-1"
+                  class="2xl:px-4 2xl:py-3 px-3 py-2 w-full rounded-full input-border 2xl:mb-4 mb-1"
                   id="input-email-contacts"
                   name="email"
                   required
@@ -242,12 +243,23 @@
                 </label>
                 <textarea
                   rows="6"
-                  class="2xl:mb-5 mb-1 rounded-2xl resize-none w-full 2xl:px-4 2xl:py-3 px-3 py-2 input-border"
+                  class="2xl:mb-4 mb-1 rounded-2xl resize-none w-full 2xl:px-4 2xl:py-3 px-3 py-2 input-border"
                   placeholder="Drop us a line"
                   id="textarea-contacts"
                   name="text"
                   required
                 ></textarea>
+                <label class="text-label mx-3 my-2" for="input-email-contacts">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  placeholder="Your phone number"
+                  class="2xl:px-4 2xl:py-3 px-3 py-2 w-full rounded-full input-border 2xl:mb-4 mb-1"
+                  id="input-tel-contacts"
+                  name="phone"
+                  required
+                />
                 <label class="text-label mx-3 my-2" for="input-text-contacts">
                   Name
                 </label>

@@ -10,6 +10,8 @@ $(document).ready(() => {
 
   $(".current-year").html(new Date().getFullYear());
 
+  $("#input-tel-main, #input-tel-contacts").mask("(000) 000-0000");
+
   const checkForm = (form) => {
     const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,4}$/;
     const isValidInputs = [];
@@ -44,7 +46,7 @@ $(document).ready(() => {
     if (status === "success") {
       el.removeClass("text-red-500")
         .addClass("text-blue-dark")
-        .html("Message Sent");
+        .html("Email was sent successfully");
     } else {
       el.removeClass("text-blue-dark")
         .addClass("text-red-500")
