@@ -48,15 +48,19 @@
   @apply mb-[90px];
 }
 
+.swiper-pagination {
+  @apply pb-2;
+}
+
 .swiper-pagination-bullet {
-  @apply opacity-100 xl:text-2xl text-xl bg-transparent rounded-none mx-5 !important;
+  @apply opacity-100 text-xl bg-transparent rounded-none w-14 !important;
 }
 
 .swiper-pagination-bullet-active {
-  @apply xl:text-4xl text-3xl xl:me-[80px] me-[60px] !important;
+  @apply text-3xl !important;
 }
 
 .swiper-pagination-bullet-active::after {
-  content: "___";
-  margin: 5px;
+  content: "__";
+  margin-left: 3px;
 }
